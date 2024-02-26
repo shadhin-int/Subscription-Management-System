@@ -25,7 +25,7 @@ type Contract struct {
 	CustomerId        Customer     `gorm:"foreignKey:CustomerId" json:"customer"`
 	SubscriptionId    Subscription `gorm:"foreignKey:SubscriptionId" json:"subscription"`
 	BillingInterval   Interval     `gorm:"BillingInterval" json:"billing_interval"`
-	Status            Status       `gorm:"not null" json:"status"`
+	Status            Status       `gorm:"Status" json:"status"`
 	ContractStartDate time.Time    `gorm:"contractStartDate" json:"contract_start_date"`
 	ContractEndDate   time.Time    `gorm:"contractEndDate" json:"contract_end_date"`
 	CreatedAt         time.Time    `gorm:"createdAt" json:"created_at"`
