@@ -20,8 +20,8 @@ func Invoice() chi.Router {
 func main() {
 	router := chi.NewRouter()
 
-	router.Mount("customer/", Customer())
-	router.Mount("invoice/", Invoice())
+	router.Mount("/customer/", Customer())
+	router.Mount("/invoice/", Invoice())
 
 	err := http.ListenAndServe(":8080", router)
 	if err != nil {

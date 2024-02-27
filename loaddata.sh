@@ -6,7 +6,7 @@ package main
 import "subscription_management_system/migrations"
 
 func main() {
-    migrations.DoMigrate()
+    migrations.LoadData()
 }
 ' > temp.go
 go run temp.go

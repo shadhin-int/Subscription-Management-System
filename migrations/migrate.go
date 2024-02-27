@@ -2,9 +2,9 @@ package migrations
 
 import (
 	"database/sql"
-	db "github.com/shadhin-int/Subscription-Management-System.git/database"
-	"github.com/shadhin-int/Subscription-Management-System.git/models"
 	"log"
+	db "subscription_management_system/database"
+	"subscription_management_system/models"
 )
 
 func DoMigrate() error {

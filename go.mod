@@ -1,6 +1,6 @@
-module github.com/shadhin-int/Subscription-Management-System.git
+module subscription_management_system
 
-go 1.21.3
+go 1.21.4
 
 require (
 	github.com/go-chi/chi v1.5.5
