@@ -11,9 +11,11 @@ const (
 )
 
 type Invoice struct {
-	Id             uint          `gorm:"primaryKey" json:"id"`
-	CustomerId     Customer      `gorm:"foreignKey:CustomerId" json:"customer"`
-	SubscriptionId Subscription  `gorm:"foreignKey:SubscriptionId" json:"subscription"`
+	Id             uint `gorm:"primaryKey" json:"id"`
+	CustomerId     int
+	SubscriptionId int
+	Customer       Customer      `gorm:"foreignKey:CustomerId" json:"customer"`
+	Subscription   Subscription  `gorm:"foreignKey:SubscriptionId" json:"subscription"`
 	IssueDate      time.Time     `gorm:"IssueDate" json:"issueDate"`
 	DueDate        time.Time     `gorm:"DueDate" json:"due_date"`
 	Amount         float64       `gorm:"Amount" json:"amount"`
