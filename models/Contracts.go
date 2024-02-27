@@ -21,9 +21,11 @@ const (
 
 type Contract struct {
 	gorm.Model
-	ID                uint         `gorm:"primaryKey" json:"id"`
-	CustomerId        Customer     `gorm:"foreignKey:CustomerId" json:"customer"`
-	SubscriptionId    Subscription `gorm:"foreignKey:SubscriptionId" json:"subscription"`
+	ID                uint `gorm:"primaryKey" json:"id"`
+	CustomerId        int
+	SubscriptionId    int
+	Customer          Customer     `gorm:"foreignKey:CustomerId" json:"customer"`
+	Subscription      Subscription `gorm:"foreignKey:SubscriptionId" json:"subscription"`
 	BillingInterval   Interval     `gorm:"BillingInterval" json:"billing_interval"`
 	Status            Status       `gorm:"Status" json:"status"`
 	ContractStartDate time.Time    `gorm:"contractStartDate" json:"contract_start_date"`
