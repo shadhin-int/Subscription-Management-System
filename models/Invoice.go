@@ -9,6 +9,5 @@ type Invoice struct {
 	IssueDate        time.Time `gorm:"issueDate" json:"issue_date"`
 	DueDate          time.Time `gorm:"dueDate" json:"due_date"`
 	Amount           float64   `gorm:"amount" json:"amount"`
-	FilePath         string    `gorm:"filePath" json:"file_path"`
 	IsSendToCustomer bool      `gorm:"IsSendToCustomer" json:"is_send_to_customer"`
 }
